@@ -42,7 +42,7 @@ One inline option that is not available globally is `-gifcontrol-disabled`. Addi
 
 ### mode
 
-When set to `hover`, when a user's mouse enters the element, the overlay will disappear and the GIF will start to play. When the user's mouse exists the element, the GIF will pause and the overlay will appear.
+When set to `hover`, the overlay will disappear and the GIF will start to play when the user's mouse enters the element. The GIF will pause and the overlay will appear when the user's mouse exits the element.
 
 When set to `click`, the overlay will disappear and the GIF will start to play only after a user clicks on the element. The user can click again to pause playback and the overlay will reappear. Any value passed other than `click` will revert back to `hover`.
 
