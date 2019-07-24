@@ -2,7 +2,7 @@
 
 ## Global Config
 
-You can set options globally that will be applied across your entire Docsify site unless [overridden by an inline option](#inline-config) by setting the `gifcontrol` object in your Docsify configuration. Below is an example with the default options.
+You can set options globally that will be applied across your entire docsify site unless [overridden by an inline option](#inline-config) by setting the `gifcontrol` object in your docsify configuration. Below is an example with the default options.
 
 ```javascript
 window.$docsify = {

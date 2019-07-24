@@ -1,7 +1,7 @@
 {
   "name": "docsify-gifcontrol",
-  "version": "0.2.0",
-  "description": "A Docsify plugin that adds customizable player controls to GIFs",
+  "version": "0.2.1",
+  "description": "A docsify plugin that adds customizable player controls to GIFs",
   "main": "src",
   "scripts": {
     "build": "webpack --mode=production",

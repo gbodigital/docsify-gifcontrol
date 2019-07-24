@@ -1,5 +1,5 @@
 # docsify-gifcontrol
-A Docsify plugin that adds customizable player controls to GIFs. GIFs will play on hover or on click depending on your [configuration](https://gbodigital.github.io/docsify-gifcontrol/#/options).
+A docsify plugin that adds customizable player controls to GIFs. GIFs will play on hover or on click depending on your [configuration](https://gbodigital.github.io/docsify-gifcontrol/#/options).
 
 Full Documentation with live examples at 
 https://gbodigital.github.io/docsify-gifcontrol
@@ -7,12 +7,12 @@ https://gbodigital.github.io/docsify-gifcontrol
 
 ## Quick Start
 
-Add the CSS file to the top of your Docsify index.html
+Add the CSS file to the top of your docsify index.html
 ```html
 <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css">
 ```
 
-Add the JavaScript file below your Docsify script tag
+Add the JavaScript file below your docsify script tag
 ```html
 <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
 ```
