@@ -1,7 +1,7 @@
 # docsify-gifcontrol
 A Docsify plugin that adds customizable player controls to GIFs. GIFs will play on hover or on click depending on your [configuration](https://gbodigital.github.io/docsify-gifcontrol/#/options).
 
-Full Documentation at 
+Full Documentation with live examples at 
 https://gbodigital.github.io/docsify-gifcontrol
 
 
