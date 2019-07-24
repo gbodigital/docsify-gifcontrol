@@ -1,0 +1,55 @@
+.gifcontrol-canvas {
+  position: relative;
+}
+
+.gifcontrol-loading-element, 
+.gifcontrol-controls-element,
+.gifcontrol-error-element {
+  display: flex;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gifcontrol-canvas.gifcontrol-loading .gifcontrol-loading-element {
+  opacity: 1;
+}
+
+.gifcontrol-canvas.gifcontrol-success .gifcontrol-controls-element {
+  opacity: 1;
+}
+
+.gifcontrol-canvas.gifcontrol-success .gifcontrol-controls-element svg {
+  display: block;
+  width: 25%;
+  height: 25%;
+  padding: 10px;
+}
+
+.gifcontrol-canvas.gifcontrol-playing .gifcontrol-controls-element {
+  opacity: 0;
+}
+
+.gifcontrol-loading-spinner {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 3px solid rgba(45, 140, 240, .3);
+  border-radius: 50%;
+  border-top-color: rgb(45, 140, 240);
+  animation: page-spinner-spin 1s ease-in-out infinite;
+}
+
+@keyframes page-spinner-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
