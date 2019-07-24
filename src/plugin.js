@@ -35,6 +35,7 @@ export function install(hook, vm) {
       container.style.stroke = options.iconColor
       container.style.width = options.loadingWidth
       container.style.height = options.loadingHeight
+      container.style.maxWidth = "100%"
       if(options.mode === 'click'){
         container.style.cursor = 'pointer'
       }
@@ -73,6 +74,8 @@ export function install(hook, vm) {
       loader.imageLoaded = function(){ 
         container.classList.remove('gifcontrol-loading') 
         container.classList.add('gifcontrol-success')
+        container.style.width = loader.animator.width
+        container.style.height = 'auto'
       }
       loader.imageError = function(error){ 
         container.classList.remove('gifcontrol-loading')
