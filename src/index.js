@@ -1,4 +1,4 @@
-import { install } from './gifcontrol.js'
+import { install } from './plugin.js'
 import './gifcontrol.css'
 
 if (!window.$docsify) {
