@@ -1,14 +1,11 @@
 # docsify-gifcontrol
-A docsify plugin that adds play controls to GIFs
-
-> This module is in early development. It is not recommended to use this in a production system
+A Docsify plugin that adds customizable player controls to GIFs. GIFs will play on hover or on click depending on your [configuration](https://gbodigital.github.io/docsify-gifcontrol/#/options).
 
 Full Documentation at 
 https://gbodigital.github.io/docsify-gifcontrol
 
-## Quick Start
 
-> Check out the [docs](https://github.com/gbodigital/docsify-gifcontrol/tree/master/docs) folder for a full example
+## Quick Start
 
 Add the CSS file to the top of your Docsify index.html
 ```html
@@ -25,35 +22,56 @@ Add a GIF in your markdown
 ![](docs/charlie.gif)
 ```
 
+## Examples
+
+#### Hover to play (default)
+
+```markdown
+<!-- Hover to play, unhover to pause (default) -->
+![](charlie.gif)
+```
+
+#### Click to play
+
+```markdown
+<!-- Click to play, click again to pause (using inline option) -->
+![](charlie2.gif "-gifcontrol-mode=click;")
+```
+
+#### Customization
+
+You can customize almost everything about the player. For more information see [the Configuration section](https://gbodigital.github.io/docsify-gifcontrol/#/options).
+
+```markdown
+<!-- Customize colors and icons -->
+![](charlie3.gif "-gifcontrol-iconColor=#ff0000; -gifcontrol-overlayColor=rgba(0,0,0,0.7); -gifcontrol-playIcon=<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><path d=\"M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z\"/></svg>;")
+```
+#### Additional customization
+
+More customization examples can be found in the [Configuration](https://gbodigital.github.io/docsify-gifcontrol/#/options) section. You can also check out the source of this documentation in the [docs](https://github.com/gbodigital/docsify-gifcontrol/tree/master/docs) folder on Github.
+
+## Excluding Images
+
+By default all GIFs in image tags will be parsed to use the player overlay unless they fall in to one of the four categories below:
+
+- Image tags with the `.emoji` class are ignored
+- Image tags with a `data-gifcontrol-disabled` attribute are ignored
+- Image tags that do not contain the `.gif` string in their `src` attribute are ignored
+- Images created with markdown that have the `-gifcontrol-disabled;` option in the title component of the image markdown are ignored
+
+#### Example
+
+```markdown
+<!-- The plugin will ignore the gif below -->
+![](charlie.gif "-gifcontrol-disabled;")
+```
 
 ## Attributions
 
-- This plugin uses a modified version of [gifler](https://github.com/themadcreator/gifler) written by Bill Dwyer under [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0) to render GIFs to an HTML canvas element
-- This plugin uses [omggif](https://github.com/deanm/omggif) written by Dean McNamee under [MIT License](https://opensource.org/licenses/MIT) to load GIF file data 
-- This plugin uses the play-circle SVG [FontAwesome Free Icon](https://fontawesome.com) which is licensed under the [Creative Commons 4.0 BY License](https://creativecommons.org/licenses/by/4.0/)
+- [omggif](https://github.com/deanm/omggif) written by Dean McNamee under [MIT License](https://opensource.org/licenses/MIT) is used to load GIF file data 
+- A customized version of [gifler](https://github.com/themadcreator/gifler) written by Bill Dwyer under [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0) is used to render GIFs to an HTML canvas element
+- The SVG icons used in the code and documentation are from the [FontAwesome Free Icon Pack](https://fontawesome.com) licensed under the [Creative Commons 4.0 BY License](https://creativecommons.org/licenses/by/4.0/)
 
 ## License
 
-> The original code in this plugin is under the MIT License. Please see licenses for dependent libraries and artwork in the Attributions section.
-
-MIT License
-
-Copyright (c) 2019 GBO Digital, LLP
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Except where otherwise noted, this software is licensed under the MIT license. Please see the [the documentation](https://gbodigital.github.io/docsify-gifcontrol/#/license) for more information.
